@@ -587,3 +587,98 @@ a { text-decoration: none; color: inherit; }
         text-align: center;
     }
 }
+/* =============================================
+   RESPONSIVE DESIGN — MOBILE VIEW
+================================================*/
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 14px 24px;
+    }
+    .nav-links {
+        gap: 18px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    .hero-name {
+        font-size: 40px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .hero-description {
+        font-size: 16px;
+        margin: 15px auto;
+        width: 90%;
+    }
+    .hero-buttons a {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+    .about-card {
+        width: 92%;
+        padding: 25px;
+    }
+    .about-title {
+        font-size: 26px;
+    }
+    .about-text {
+        font-size: 15px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        padding-left: 15px;
+    }
+    .timeline-content h3 {
+        font-size: 17px;
+    }
+    .timeline-content p {
+        font-size: 14px;
+    }
+
+    /* SKILLS */
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+    }
+    .skill-box {
+        text-align: center;
+    }
+
+    /* PROJECTS */
+    .project-grid-advanced {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .contact-card {
+        width: 100%;
+    }
+    .contact-option {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+

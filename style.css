@@ -1,7 +1,12 @@
+
 /* =====================================================
    GLOBAL
 ===================================================== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -11,33 +16,15 @@ body {
     scroll-behavior: smooth;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 /* =====================================================
    NAVBAR
 ===================================================== */
-.brand-enjelite {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-
-    background: linear-gradient(90deg, #00c6ff, #6a5cff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-transform: uppercase;
-    text-shadow: 0px 0px 12px rgba(0, 140, 255, 0.4);
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.brand-enjelite:hover {
-    opacity: 0.85;
-    text-shadow: 0px 0px 18px rgba(0, 174, 255, 0.55);
-    transform: scale(1.03);
-}
-
 .navbar {
     position: fixed;
     top: 0;
@@ -51,12 +38,24 @@ a { text-decoration: none; color: inherit; }
     z-index: 1000;
 }
 
-.nav-logo {
-    font-size: 28px;
-    font-weight: 700;
-    background: linear-gradient(90deg,#00c6ff,#0072ff);
+/* BRAND LOGO ENJELITE */
+.brand-enjelite {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    background: linear-gradient(90deg, #00c6ff, #6a5cff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 12px rgba(0, 140, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.brand-enjelite:hover {
+    opacity: 0.85;
+    text-shadow: 0px 0px 18px rgba(0, 174, 255, 0.55);
+    transform: scale(1.03);
 }
 
 .nav-links {
@@ -101,21 +100,39 @@ a { text-decoration: none; color: inherit; }
    SHAPES / BACKGROUND GLOWS
 ===================================================== */
 .shape {
-    position:absolute;
-    border-radius:50%;
-    filter:blur(75px);
-    opacity:.55;
-    animation:float 8s infinite ease-in-out;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(75px);
+    opacity: .55;
+    animation: float 8s infinite ease-in-out;
 }
 
-.shape1 { width:350px;height:350px; background:#0072ff; top:-80px; left:-80px; }
-.shape2 { width:450px;height:450px; background:#00c6ff; bottom:-120px; right:-120px; }
-.shape3 { width:300px;height:300px; background:#26ffe6; top:40%; left:60%; }
+.shape1 {
+    width: 350px;
+    height: 350px;
+    background: #0072ff;
+    top: -80px;
+    left: -80px;
+}
+.shape2 {
+    width: 450px;
+    height: 450px;
+    background: #00c6ff;
+    bottom: -120px;
+    right: -120px;
+}
+.shape3 {
+    width: 300px;
+    height: 300px;
+    background: #26ffe6;
+    top: 40%;
+    left: 60%;
+}
 
 @keyframes float {
-    0% { transform:translateY(0); }
-    50% { transform:translateY(-25px); }
-    100% { transform:translateY(0); }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0); }
 }
 
 
@@ -425,93 +442,55 @@ a { text-decoration: none; color: inherit; }
 
 
 /* =====================================================
-   CONTACT
+   CONTACT (PREMIUM GRID)
 ===================================================== */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 45px;
-}
-
-.contact-card {
-    background: rgba(255,255,255,0.08);
-    padding: 35px;
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-}
-
-.contact-form {
-    display:flex;
-    flex-direction:column;
-    width:350px;
-    gap:12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding:12px;
-    border-radius:8px;
-    background:#1e293b;
-    border:none;
-    color:white;
-}
-/* CONTACT SOCIAL LINKS */
-.contact-socials {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.social-link {
-    background: #1e293b;
-    padding: 12px 18px;
-    border-radius: 12px;
-    font-size: 16px;
-    width: fit-content;
-    transition: .3s;
-    border: 1px solid rgba(255,255,255,0.07);
-}
-
-.social-link:hover {
-    background: linear-gradient(90deg,#00c6ff,#0072ff);
-    color: white;
-    transform: translateX(6px);
-}
-/* CONTACT SECTION LAYOUT */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
+.contact-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: flex-start;
-    gap: 50px;
-    padding-top: 20px;
 }
 
-/* SOCIAL BOX */
-.contact-social-box {
+/* LEFT TEXT */
+.contact-left h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contact-left p {
+    font-size: 17px;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+/* RIGHT BUTTON AREA */
+.contact-right {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 30px;
 }
 
-/* SETIAP BARIS ITEM */
+/* ITEM (BTN + CAPTION) */
 .contact-item {
     display: flex;
-    align-items: center;
-    gap: 18px;
+    flex-direction: column;
+    gap: 6px;
 }
 
-/* BUTTON */
+/* BUTTON STYLE */
 .contact-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: #1e293b;
-    padding: 12px 20px;
-    border-radius: 12px;
+    padding: 14px 22px;
+    border-radius: 14px;
     color: white;
     font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+    width: fit-content;
     transition: .3s;
 }
 
@@ -520,58 +499,114 @@ a { text-decoration: none; color: inherit; }
     transform: translateX(6px);
 }
 
-/* ICON STYLE */
+/* ICON */
 .contact-icon {
     width: 22px;
     height: 22px;
 }
 
-/* CAPTION DI SAMPING BUTTON */
+/* CAPTION */
 .contact-caption {
-    font-size: 15px;
+    font-size: 14px;
     color: #94a3b8;
+    padding-left: 4px;
 }
-
-/* MOBILE RESPONSIVE */
-@media(max-width: 900px){
-    .contact-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-item {
-        justify-content: center;
-    }
-}
-
 
 
 /* =====================================================
    FOOTER
 ===================================================== */
 .footer {
-    text-align:center;
-    padding:18px;
-    color:#64748b;
+    text-align: center;
+    padding: 18px;
+    color: #64748b;
 }
 
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE (TABLET & MOBILE)
 ===================================================== */
-@media(max-width: 900px) {
+@media (max-width: 900px) {
 
+    /* NAVBAR */
+    .navbar {
+        padding: 14px 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 110px 24px 80px 24px;
+    }
+
+    /* HERO */
     .hero {
         flex-direction: column;
-        padding: 40px;
         text-align: center;
+        padding: 0 24px;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
     }
 
     .hero-name {
-        justify-content: center;
-        font-size: 50px;
+        font-size: 40px;
+        flex-direction: column;
+        gap: 5px;
     }
 
+    .hero-description {
+        font-size: 16px;
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .hero-buttons a {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+    .about-card {
+        width: 100%;
+        padding: 26px;
+    }
+
+    .about-title {
+        font-size: 26px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .timeline {
+        padding-left: 16px;
+    }
+
+    .timeline-content h3 {
+        font-size: 17px;
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    }
+
+    /* SKILLS */
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* PROJECTS */
     .project-row,
     .project-row.reverse {
         flex-direction: column;
@@ -582,103 +617,19 @@ a { text-decoration: none; color: inherit; }
         height: 200px;
     }
 
-    .contact-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* =============================================
-   RESPONSIVE DESIGN — MOBILE VIEW
-================================================*/
-@media (max-width: 768px) {
-
-    /* NAVBAR */
-    .navbar {
-        padding: 14px 24px;
-    }
-    .nav-links {
-        gap: 18px;
-    }
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    /* HERO */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 20px;
-        height: auto;
-        padding-top: 120px;
-        padding-bottom: 80px;
-    }
-    .hero-name {
-        font-size: 40px;
-        flex-direction: column;
-        gap: 5px;
-    }
-    .hero-description {
-        font-size: 16px;
-        margin: 15px auto;
-        width: 90%;
-    }
-    .hero-buttons a {
-        font-size: 16px;
-        padding: 10px 20px;
-        margin-bottom: 10px;
-    }
-
-    /* ABOUT */
-    .about-card {
-        width: 92%;
-        padding: 25px;
-    }
-    .about-title {
-        font-size: 26px;
-    }
-    .about-text {
-        font-size: 15px;
-    }
-
-    /* TIMELINE */
-    .timeline {
-        padding-left: 15px;
-    }
-    .timeline-content h3 {
-        font-size: 17px;
-    }
-    .timeline-content p {
-        font-size: 14px;
-    }
-
-    /* SKILLS */
-    .skills-wrapper {
-        grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 15px;
-    }
-    .skill-box {
-        text-align: center;
-    }
-
-    /* PROJECTS */
-    .project-grid-advanced {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
     /* CONTACT */
-    .contact-container {
-        flex-direction: column;
-        gap: 25px;
+    .contact-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
     }
-    .contact-card {
-        width: 100%;
+
+    .contact-right {
+        align-items: center;
     }
-    .contact-option {
-        width: 100%;
-        justify-content: space-between;
+
+    .contact-btn {
+        justify-content: center;
+        width: 80%;
     }
 }
-
-
